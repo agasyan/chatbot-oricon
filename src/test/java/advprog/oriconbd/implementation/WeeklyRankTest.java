@@ -20,7 +20,7 @@ public class WeeklyRankTest {
     }
 
     @Test
-    public void testConstructorWork(){
+    public void testConstructorWeeklyRankWork(){
         assertNotNull(weeklyRank);
     }
 
