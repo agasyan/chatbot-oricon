@@ -20,7 +20,7 @@ public class WeeklyRankTest {
     }
 
     @Test
-    public void testConstructorWeeklyRankWork(){
+    public void testConstructorWeeklyRankWork() {
         assertNotNull(weeklyRank);
     }
 
@@ -30,7 +30,7 @@ public class WeeklyRankTest {
         TextMessage validUrlOutput = weeklyRank.run(validDate);
         String expectedOutput = "Top 10 Oricon BD as requested \n"
                 + "(1) スター・ウォーズ/最後のジェダイ MovieNEX(初回版) - マーク・ハミル"
-                +" - 2018-04-25\n"
+                + " - 2018-04-25\n"
                 + "(2) ラブライブ!サンシャイン!! 2nd Season 5【特装限定版】 - アニメーション"
                 + " - 2018-04-24\n"
                 + "(3) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter” -"
@@ -44,16 +44,16 @@ public class WeeklyRankTest {
                 + "(8) アイドリッシュセブン Blu-ray 3【特装限定版】 - アニメーション - 2018-04-24\n"
                 + "(9) アウトレイジ 最終章 - ビートたけし - 2018-04-24\n"
                 + "(10) アイドルマスター SideM 5(完全生産限定版) - アニメーション - 2018-04-25";
-        assertEquals(validUrlOutput.getText(),expectedOutput);
+        assertEquals(validUrlOutput.getText(), expectedOutput);
     }
 
     @Test
     public void weeklyInvalidDate() throws IOException {
         String invalidDate = "2018-05-08";
-        TextMessage invalidDateOutput = weeklyRank.run(invalidDate) ;
+        TextMessage invalidDateOutput = weeklyRank.run(invalidDate);
         String invalidWeeklyOutput = "Invalid URL/Date. Date should be "
                 + "in this format (YYYY-MM-DD) and  should be "
                 + "on Monday.";
-        assertEquals(invalidDateOutput.getText(),invalidWeeklyOutput);
+        assertEquals(invalidDateOutput.getText(), invalidWeeklyOutput);
     }
 }

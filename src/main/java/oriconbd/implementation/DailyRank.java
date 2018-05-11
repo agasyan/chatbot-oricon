@@ -1,12 +1,16 @@
 package oriconbd.implementation;
 
 import com.linecorp.bot.model.message.TextMessage;
+
 import java.io.IOException;
+
 import oriconbd.utilities.WebScrapper;
 
 
-
 public class DailyRank {
+    /**
+     * Constructor Daily Rank.
+     */
     public DailyRank() {
 
     }
@@ -16,11 +20,22 @@ public class DailyRank {
         System.out.println(dailyRank.run("2018-05-03"));
     }
     */
+    /**
+     * Membuat WebScrapper untuk mengambil data dari oricon.
+     */
 
     private WebScrapper webScrapper = new WebScrapper();
-
+    /**
+     * Format URL To search daily Rank.
+     */
     private static final String DAILY_URL_FORMAT = "https://www.oricon.co.jp/rank/bd/d/";
 
+    /**
+     * Fungsi Run untuk menghasilkan output ranking.
+     * @param date valid yaitu dari tanggal dikurang 8.
+     * @return TextMessage yang merupakan sebuah class di Line BOT.
+     * @throws IOException untuk handle IOException pada pembacaan IO.
+     */
     public TextMessage run(String date) throws IOException {
         String webOutput = webScrapper.webScrapperGetter(DAILY_URL_FORMAT + date + "/");
         if (webOutput.contains("Invalid URL, Please check Your Input")) {

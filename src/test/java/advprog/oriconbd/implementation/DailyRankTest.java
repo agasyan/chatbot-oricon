@@ -21,7 +21,7 @@ public class DailyRankTest {
     }
 
     @Test
-    public void testConstructorDailyRankWork(){
+    public void testConstructorDailyRankWork() {
         assertNotNull(dailyRank);
     }
 
@@ -40,11 +40,11 @@ public class DailyRankTest {
                 + "(8) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter” - 浜田省吾 - 2018-04-25\n"
                 + "(9) キングスマン:ゴールデン・サークル 2枚組ブルーレイ&DVD - タロン・エガートン - 2018-04-06\n"
                 + "(10) ミックス。 豪華版Blu-ray - 新垣結衣,瑛太 - 2018-05-02";
-        assertEquals(validDateOutput.getText(),dailyThirdMay);
+        assertEquals(validDateOutput.getText(), dailyThirdMay);
     }
 
     @Test
-    public void testDailyOutInvalidDate() throws IOException{
+    public void testDailyOutInvalidDate() throws IOException {
         String invalidDate = "2018-04-30";
         TextMessage invalidDateOutput = dailyRank.run(invalidDate);
         String invalidExpected = "Invalid URL/Date. Date should be "
@@ -52,6 +52,6 @@ public class DailyRankTest {
                 + "on 8 days before the date (today - 2 days)"
                 + "example now on 11 May so the available date"
                 + "on 2 May - 9 May";
-        assertEquals(invalidDateOutput.getText(),invalidExpected);
+        assertEquals(invalidDateOutput.getText(), invalidExpected);
     }
 }

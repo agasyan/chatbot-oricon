@@ -10,7 +10,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 
-
 public class WebScrapper {
     /*
     public static void main(String[]args) throws IOException {
@@ -19,15 +18,24 @@ public class WebScrapper {
     }
     */
 
+    /**
+     * Constructor for webscrapper.
+     */
     public WebScrapper() {
 
     }
 
+    /**
+     * Getter website untuk mengambil kontennya.
+     * @param url url yang ingin diambil.
+     * @return string yang merupakan rank
+     * @throws IOException saat membaca input
+     */
     public String webScrapperGetter(String url) throws IOException {
         try {
             Document document = Jsoup.connect(url).get();
             Elements bdMovie = document.select("section.box-rank-entry");
-            return  "Top 10 Oricon BD as requested \n"
+            return "Top 10 Oricon BD as requested \n"
                     + bdMovie.stream().map(this::bluRayOutputManager)
                     .collect(Collectors.joining("\n"));
         } catch (HttpStatusException e) {
@@ -42,11 +50,16 @@ public class WebScrapper {
         String movieArtist = informationBd.select("p.name").text();
         String movieReleaseDate = dateConvert(informationBd.selectFirst("li").text());
         return String.format("(%s) %s - %s - %s", rankingBd,
-            movieTitle,movieArtist,movieReleaseDate);
+                movieTitle, movieArtist, movieReleaseDate);
     }
 
+    /**
+     * mengkonversi tanggal dari format jepang ke format yang diminta
+     * @param rawDate tanggal yang masih dalam format bahasa jepang
+     * @return tanggal yang sudah dibersihkan dari huruf jepang
+     */
     private String dateConvert(String rawDate) {
-        return  rawDate.replace("発売日： ","")
+        return rawDate.replace("発売日： ", "")
                 .replace("年", "-")
                 .replace("月", "-")
                 .replace("日", "");

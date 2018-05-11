@@ -53,6 +53,6 @@ public class WebScrapperTest {
         String invalidUrl = "https://www.oricon.co.jp/rank/bd/w/2018-05-08/";
         String invalidRank = webScrapper.webScrapperGetter(invalidUrl);
         String invalidOutput = "Invalid URL, Please check Your Input";
-        assertEquals(invalidOutput,invalidRank);
+        assertEquals(invalidOutput, invalidRank);
     }
 }
