@@ -12,7 +12,6 @@ import org.jsoup.select.Elements;
 
 
 public class WebScrapper {
-    //TODO IMPLEMENT THIS
     /*
     public static void main(String[]args) throws IOException {
         WebScrapper webScrapper = new WebScrapper();
