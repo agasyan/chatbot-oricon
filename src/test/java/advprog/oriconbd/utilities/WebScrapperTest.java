@@ -1,4 +1,4 @@
-package advprog.oriconbd.utilitiesTest;
+package advprog.oriconbd.utilities;
 
 public class WebScrapperTest {
 }

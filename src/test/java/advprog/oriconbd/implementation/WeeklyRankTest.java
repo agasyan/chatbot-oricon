@@ -1,4 +1,4 @@
-package advprog.oriconbd.implementationTest;
+package advprog.oriconbd.implementation;
 
 public class WeeklyRankTest {
 }
