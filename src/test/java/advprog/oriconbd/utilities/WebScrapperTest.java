@@ -1,14 +1,14 @@
 package advprog.oriconbd.utilities;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import oriconbd.utilities.WebScrapper;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.IOException;
+
+import oriconbd.utilities.WebScrapper;
 
 public class WebScrapperTest {
 
@@ -35,7 +35,8 @@ public class WebScrapperTest {
                 + " - 2018-04-24\n"
                 + "(3) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter”"
                 + " - 浜田省吾 - 2018-04-25\n"
-                + "(4) ラブライブ!サンシャイン!! Aqours 2nd LoveLive! HAPPY PARTY TRAIN TOUR Blu-ray Memorial BOX"
+                + "(4) ラブライブ!サンシャイン!! Aqours 2nd LoveLive! HAPPY PARTY TRAIN"
+                + " TOUR Blu-ray Memorial BOX"
                 + " - Aqours - 2018-04-25\n"
                 + "(5) THE IDOLM@STER SideM GREETING TOUR 2017 〜BEYOND THE DREAM〜"
                 + " LIVE Blu-ray - アイドルマスタ"

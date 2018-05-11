@@ -1,16 +1,15 @@
 package advprog.oriconbd.implementation;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import com.linecorp.bot.model.message.TextMessage;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import oriconbd.implementation.DailyRank;
-
 import java.io.IOException;
 
+import oriconbd.implementation.DailyRank;
 
 public class DailyRankTest {
     private DailyRank dailyRank;
@@ -37,8 +36,10 @@ public class DailyRankTest {
                 + "(5) マイティ・ソー バトルロイヤル MovieNEX - クリス・ヘムズワース - 2018-03-07\n"
                 + "(6) ラブライブ!サンシャイン!! 2nd Season 5【特装限定版】 - アニメーション - 2018-04-24\n"
                 + "(7) アウトレイジ 最終章 - ビートたけし - 2018-04-24\n"
-                + "(8) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter” - 浜田省吾 - 2018-04-25\n"
-                + "(9) キングスマン:ゴールデン・サークル 2枚組ブルーレイ&DVD - タロン・エガートン - 2018-04-06\n"
+                + "(8) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter”"
+                + " - 浜田省吾 - 2018-04-25\n"
+                + "(9) キングスマン:ゴールデン・サークル 2枚組ブルーレイ&DVD - タロン・エガートン"
+                + " - 2018-04-06\n"
                 + "(10) ミックス。 豪華版Blu-ray - 新垣結衣,瑛太 - 2018-05-02";
         assertEquals(validDateOutput.getText(), dailyThirdMay);
     }
