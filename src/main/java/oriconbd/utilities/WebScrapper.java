@@ -54,7 +54,7 @@ public class WebScrapper {
     }
 
     /**
-     * mengkonversi tanggal dari format jepang ke format yang diminta
+     * mengkonversi tanggal dari format jepang ke format yang diminta.
      * @param rawDate tanggal yang masih dalam format bahasa jepang
      * @return tanggal yang sudah dibersihkan dari huruf jepang
      */
