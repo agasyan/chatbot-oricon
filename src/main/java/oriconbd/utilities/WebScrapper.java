@@ -1,4 +1,4 @@
 package oriconbd.utilities;
 
-public class webScrapper {
+public class WebScrapper {
 }

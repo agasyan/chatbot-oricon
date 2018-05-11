@@ -1,4 +1,4 @@
 package oriconbd.implementation;
 
-public class dailyRank {
+public class DailyRank {
 }
