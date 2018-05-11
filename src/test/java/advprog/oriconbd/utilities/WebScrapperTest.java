@@ -48,13 +48,13 @@ public class WebScrapperTest {
 
     @Test
     public void testRankingValidURL() throws IOException {
-        String validRankExp = webScrapper.WebScrapperGetter(validURL);
+        String validRankExp = webScrapper.webScrapperGetter(validURL);
         assertEquals(validRankExp,expectedOut);
     }
 
     @Test
     public void testRankingInvalidURL() throws IOException {
-        String invalidRank = webScrapper.WebScrapperGetter(invalidURL);
+        String invalidRank = webScrapper.webScrapperGetter(invalidURL);
         assertEquals(invalidOutput,invalidRank);
     }
 }
