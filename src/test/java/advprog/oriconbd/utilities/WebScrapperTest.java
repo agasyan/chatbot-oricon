@@ -3,10 +3,10 @@ package advprog.oriconbd.utilities;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.io.IOException;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import java.io.IOException;
 
 import oriconbd.utilities.WebScrapper;
 

@@ -4,10 +4,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import com.linecorp.bot.model.message.TextMessage;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.io.IOException;
+
+import org.junit.Before;
+import org.junit.Test;
 
 import oriconbd.implementation.WeeklyRank;
 
