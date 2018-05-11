@@ -15,7 +15,7 @@ public class WeeklyRankTest {
     private WeeklyRank weeklyRank;
 
     @Before
-    public void SetUp() {
+    public void setUp() {
         weeklyRank = new WeeklyRank();
     }
 
