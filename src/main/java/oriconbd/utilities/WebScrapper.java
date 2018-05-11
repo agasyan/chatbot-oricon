@@ -41,9 +41,8 @@ public class WebScrapper {
         String movieTitle = informationBd.select("h2.title").text();
         String movieArtist = informationBd.select("p.name").text();
         String movieReleaseDate = dateConvert(informationBd.selectFirst("li").text());
-        String output = String.format("(%s) %s - %s - %s", rankingBd,
+        return String.format("(%s) %s - %s - %s", rankingBd,
             movieTitle,movieArtist,movieReleaseDate);
-        return output;
     }
 
     private String dateConvert(String rawDate) {
