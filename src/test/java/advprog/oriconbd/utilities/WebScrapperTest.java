@@ -30,21 +30,21 @@ public class WebScrapperTest {
         String validRankExp = webScrapper.webScrapperGetter(validUrl);
         String expectedOut = "Top 10 Oricon BD as requested \n"
                 + "(1) スター・ウォーズ/最後のジェダイ MovieNEX(初回版) - マーク・ハミル"
-                + " - 2018-04-25 ウォルト・ディズニー・ジャパン\n"
+                + " - 2018-04-25\n"
                 + "(2) ラブライブ!サンシャイン!! 2nd Season 5【特装限定版】 - アニメーション"
-                + " - 2018-04-24 バンダイナムコアーツ\n"
+                + " - 2018-04-24\n"
                 + "(3) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter”"
-                + " - 浜田省吾 - 2018-04-25 SME Records\n"
+                + " - 浜田省吾 - 2018-04-25\n"
                 + "(4) ラブライブ!サンシャイン!! Aqours 2nd LoveLive! HAPPY PARTY TRAIN TOUR Blu-ray Memorial BOX"
-                + " - Aqours - 2018-04-25 ランティス\n"
+                + " - Aqours - 2018-04-25\n"
                 + "(5) THE IDOLM@STER SideM GREETING TOUR 2017 〜BEYOND THE DREAM〜"
                 + " LIVE Blu-ray - アイドルマスタ"
-                + "ーSideM - 2018-04-25 ランティス\n"
-                + "(6) スター・ウォーズ/最後のジェダイ 4K UHD MovieNEX - マーク・ハミル - 2018-04-25 ウォルト・ディズニー・ジャパン\n"
-                + "(7) A3! FIRST Blooming FESTIVAL【Blu-ray】 - - - 2018-04-25 ポニーキャニオン\n"
-                + "(8) アイドリッシュセブン Blu-ray 3【特装限定版】 - アニメーション - 2018-04-24 バンダイナムコアーツ\n"
-                + "(9) アウトレイジ 最終章 - ビートたけし - 2018-04-24 バンダイナムコアーツ\n"
-                + "(10) アイドルマスター SideM 5(完全生産限定版) - アニメーション - 2018-04-25 アニプレックス";
+                + "ーSideM - 2018-04-25\n"
+                + "(6) スター・ウォーズ/最後のジェダイ 4K UHD MovieNEX - マーク・ハミル - 2018-04-25\n"
+                + "(7) A3! FIRST Blooming FESTIVAL【Blu-ray】 - - - 2018-04-25\n"
+                + "(8) アイドリッシュセブン Blu-ray 3【特装限定版】 - アニメーション - 2018-04-24\n"
+                + "(9) アウトレイジ 最終章 - ビートたけし - 2018-04-24\n"
+                + "(10) アイドルマスター SideM 5(完全生産限定版) - アニメーション - 2018-04-25";
         assertEquals(validRankExp, expectedOut);
     }
 
