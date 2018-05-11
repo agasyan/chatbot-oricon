@@ -12,12 +12,12 @@ import org.jsoup.select.Elements;
 
 
 public class WebScrapper {
-    /*
+
     public static void main(String[]args) throws IOException {
         WebScrapper webScrapper = new WebScrapper();
-        System.out.println(webScrapper.WebScrapperGetter("https://www.oricon.co.jp/rank/bd/w/2018-05-07/"));
+        System.out.println(webScrapper.webScrapperGetter("https://www.oricon.co.jp/rank/bd/w/2018-05-07/"));
     }
-    */
+
 
     public WebScrapper() {
 
@@ -39,10 +39,10 @@ public class WebScrapper {
         String rankingBd = rawBdRank.select("p.num").text();
         Element informationBd = rawBdRank.selectFirst("div.wrap-text");
         String movieTitle = informationBd.select("h2.title").text();
-        String movieProducer = informationBd.select("p.name").text();
-        String movieReleaseDate = dateConvert(informationBd.select("li").text());
+        String movieArtist = informationBd.select("p.name").text();
+        String movieReleaseDate = dateConvert(informationBd.selectFirst("li").text());
         String output = String.format("(%s) %s - %s - %s", rankingBd,
-            movieTitle,movieProducer,movieReleaseDate);
+            movieTitle,movieArtist,movieReleaseDate);
         return output;
     }
 
