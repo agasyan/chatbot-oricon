@@ -12,12 +12,12 @@ import org.jsoup.select.Elements;
 
 
 public class WebScrapper {
-
+    /*
     public static void main(String[]args) throws IOException {
         WebScrapper webScrapper = new WebScrapper();
         System.out.println(webScrapper.webScrapperGetter("https://www.oricon.co.jp/rank/bd/w/2018-05-07/"));
     }
-
+    */
 
     public WebScrapper() {
 
