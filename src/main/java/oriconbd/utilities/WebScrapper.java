@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 
@@ -24,31 +24,30 @@ public class WebScrapper {
 
     }
 
-    public String WebScrapperGetter(String url) throws IOException{
+    public String webScrapperGetter(String url) throws IOException {
         try {
             Document document = Jsoup.connect(url).get();
             Elements bdMovie = document.select("section.box-rank-entry");
             return  "Top 10 Oricon BD as requested \n"
-                    +bdMovie.stream().map(this::bluRayOutputManager)
+                    + bdMovie.stream().map(this::bluRayOutputManager)
                     .collect(Collectors.joining("\n"));
-        }
-        catch (HttpStatusException e) {
+        } catch (HttpStatusException e) {
             return "Invalid URL, Please check Your Input";
         }
     }
 
-    private String bluRayOutputManager(Element rawBDRank) {
-        String rankingBD = rawBDRank.select("p.num").text();
-        Element informationBD = rawBDRank.selectFirst("div.wrap-text");
-        String movieTitle = informationBD.select("h2.title").text();
-        String movieProducer = informationBD.select("p.name").text();
-        String movieReleaseDate = dateConvert(informationBD.select("li").text());
-        String output = String.format("(%s) %s - %s - %s", rankingBD
-        ,movieTitle,movieProducer,movieReleaseDate);
+    private String bluRayOutputManager(Element rawBdRank) {
+        String rankingBd = rawBdRank.select("p.num").text();
+        Element informationBd = rawBdRank.selectFirst("div.wrap-text");
+        String movieTitle = informationBd.select("h2.title").text();
+        String movieProducer = informationBd.select("p.name").text();
+        String movieReleaseDate = dateConvert(informationBd.select("li").text());
+        String output = String.format("(%s) %s - %s - %s", rankingBd,
+            movieTitle,movieProducer,movieReleaseDate);
         return output;
     }
 
-    private String dateConvert (String rawDate) {
+    private String dateConvert(String rawDate) {
         return  rawDate.replace("発売日： ","")
                 .replace("年", "-")
                 .replace("月", "-")
