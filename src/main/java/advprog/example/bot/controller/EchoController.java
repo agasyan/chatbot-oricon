@@ -47,7 +47,7 @@ public class EchoController {
                     + "1. /oricon bluray weekly:\n"
                     + "    Input spesification:\n"
                     + "    /orican bluray weekly <<date>>\n"
-                    + "    date should be on monday and at 6 Week Range from date today"
+                    + "    date should be on monday and at 6 Week Range from date today\n"
                     + "2. /oricon bluray daily:\n"
                     + "    Input spesification:\n"
                     + "    /orican bluray daily <<date>>\n"
