@@ -27,7 +27,7 @@ public class OriconController {
         String contentText = content.getText();
         String[] stringSplit = contentText.split(" ");
         if (stringSplit[0].contains("/oricon") && stringSplit.length == 4
-                && stringSplit[1].contains("/bluray")) {
+                && stringSplit[1].contains("bluray")) {
             String date = stringSplit[3];
             if (stringSplit[2].contains("weekly")) {
                 WeeklyRank weeklyRank = new WeeklyRank();
@@ -37,8 +37,8 @@ public class OriconController {
                 return dailyRank.run(date);
             }
         }
-        return new TextMessage("Wrong Input sorry example "
-                + "input:'/oricon bluray weekly 2018-05-09'");
+        return new TextMessage("Wrong Input sorry example\n"
+                + "input: /oricon bluray weekly 2018-05-09");
     }
 
     @EventMapping
