@@ -27,22 +27,23 @@ public class DailyRankTest {
 
     @Test
     public void testDailyOutValidDate() throws IOException {
-        String dateThirdMay = "2018-05-03";
-        TextMessage validDateOutput = dailyRank.run(dateThirdMay);
-        String dailyThirdMay = "Top 10 Oricon BD as requested \n"
-                + "(1) スター・ウォーズ/最後のジェダイ MovieNEX(初回版) - マーク・ハミル - 2018-04-25\n"
-                + "(2) ヴァイオレット・エヴァーガーデン�A - アニメーション - 2018-05-02\n"
-                + "(3) オリエント急行殺人事件 2枚組ブルーレイ&DVD - ケネス・ブラナー - 2018-05-02\n"
-                + "(4) 斉木楠雄のΨ難 豪華版ブルーレイ&DVDセット【初回生産限定】 - 山崎賢人 - 2018-05-02\n"
-                + "(5) マイティ・ソー バトルロイヤル MovieNEX - クリス・ヘムズワース - 2018-03-07\n"
-                + "(6) ラブライブ!サンシャイン!! 2nd Season 5【特装限定版】 - アニメーション - 2018-04-24\n"
-                + "(7) アウトレイジ 最終章 - ビートたけし - 2018-04-24\n"
-                + "(8) SHOGO HAMADA ON THE ROAD 2015-2016“Journey of a Songwriter”"
-                + " - 浜田省吾 - 2018-04-25\n"
-                + "(9) キングスマン:ゴールデン・サークル 2枚組ブルーレイ&DVD - タロン・エガートン"
-                + " - 2018-04-06\n"
-                + "(10) ミックス。 豪華版Blu-ray - 新垣結衣,瑛太 - 2018-05-02";
-        assertEquals(validDateOutput.getText(), dailyThirdMay);
+        String dateTwelveMay = "2018-05-12";
+        TextMessage validDateOutput = dailyRank.run(dateTwelveMay);
+        String dailyTwelveMay = "Top 10 Oricon BD as requested \n"
+                + "(1) 劇場版「Fate/stay night[Heaven’s Feel]�T.presage flower」(完全生産限定版)"
+                + " - アニメーション - 2018-05-09\n"
+                + "(2) スター・ウォーズ/最後のジェダイ MovieNEX(初回版) - マーク・ハミル - 2018-04-25\n"
+                + "(3) 劇場版「Fate/stay night[Heaven’s Feel]�T.presage flower」(通常版)"
+                + " - アニメーション - 2018-05-09\n"
+                + "(4) ナラタージュ Blu-ray 豪華版 - 松本潤 - 2018-05-09\n"
+                + "(5) Little Glee Monster Arena Tour 2018 -juice !!!!!- at YOKOHAMA ARENA"
+                + " - Little Glee Monster - 2018-05-09\n"
+                + "(6) カードキャプターさくら クリアカード編 Vol.1＜初回仕様版＞ - アニメーション - 2018-05-09\n"
+                + "(7) ワイルド・スピード ICE BREAK - ヴィン・ディーゼル - 2018-05-09\n"
+                + "(8) キャプテン・アメリカ/ザ・ファースト・アベンジャー MovieNEX - クリス・エヴァンス - 2018-04-04\n"
+                + "(9) シビル・ウォー/キャプテン・アメリカ MovieNEX - クリス・エヴァンス - 2016-09-16\n"
+                + "(10) マイティ・ソー バトルロイヤル MovieNEX - クリス・ヘムズワース - 2018-03-07";
+        assertEquals(dailyTwelveMay,validDateOutput.getText());
     }
 
     @Test

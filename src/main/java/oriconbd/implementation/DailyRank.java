@@ -7,7 +7,7 @@ import java.io.IOException;
 import oriconbd.utilities.WebScrapper;
 
 
-public class DailyRank {
+public class DailyRank implements RankCommand{
     /**
      * Constructor Daily Rank.
      */
@@ -17,7 +17,7 @@ public class DailyRank {
     /*
     public static void main(String[]args) throws IOException{
         DailyRank dailyRank = new DailyRank();
-        System.out.println(dailyRank.run("2018-05-03"));
+        System.out.println(dailyRank.run("2018-05-12"));
     }
     */
     /**
