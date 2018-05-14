@@ -20,8 +20,8 @@ public class EchoController {
     private static final Logger LOGGER = Logger.getLogger(EchoController.class.getName());
 
     @EventMapping
-    public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) throws
-            IOException {
+        public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) throws
+        IOException {
         LOGGER.fine(String.format("TextMessageContent(timestamp='%s',content='%s')",
                 event.getTimestamp(), event.getMessage()));
 
@@ -72,5 +72,20 @@ public class EchoController {
     public void handleDefaultMessage(Event event) {
         LOGGER.fine(String.format("Event(timestamp='%s',source='%s')",
                 event.getTimestamp(), event.getSource()));
+    }
+
+    @EventMapping
+    public TextMessage handleTextMessageEventNew(MessageEvent<TextMessageContent> event) throws
+            IOException {
+        LOGGER.fine(String.format("TextMessageContent(timestamp='%s',content='%s')",
+                event.getTimestamp(), event.getMessage()));
+
+        TextMessageContent content = event.getMessage();
+        String contentText = content.getText();
+        String[] contentSplit = contentText.split(" ");
+        if (contentSplit[0].equals("/agas")) {
+            return new TextMessage("wadidaw");
+        }
+        return new TextMessage("pastianeh");
     }
 }
