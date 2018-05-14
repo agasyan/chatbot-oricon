@@ -26,19 +26,40 @@ public class OriconController {
         TextMessageContent content = event.getMessage();
         String contentText = content.getText();
         String[] stringSplit = contentText.split(" ");
-        if (stringSplit[0].contains("/oricon") && stringSplit.length == 4
-                && stringSplit[1].contains("bluray")) {
+        if (stringSplit[0].equals("/oricon") && stringSplit.length == 4
+                && stringSplit[1].equals("bluray")) {
             String date = stringSplit[3];
-            if (stringSplit[2].contains("weekly")) {
+            if (stringSplit[2].equals("weekly")) {
                 WeeklyRank weeklyRank = new WeeklyRank();
                 return weeklyRank.run(date);
-            } else if (stringSplit[2].contains("daily")) {
+            } else if (stringSplit[2].equals("daily")) {
                 DailyRank dailyRank = new DailyRank();
                 return dailyRank.run(date);
             }
+        } else if (stringSplit[0].equals("/help")) {
+            String help = "Help with Bot:\n"
+                    + "/oricon bluray have 2 commands:\n"
+                    + "1. /oricon bluray weekly:\n"
+                    + "    Input spesification:\n"
+                    + "    /orican bluray weekly <<date>>\n"
+                    + "    date should be on monday and at 6 Week Range from date today"
+                    + "1. /oricon bluray daily:\n"
+                    + "    Input spesification:\n"
+                    + "    /orican bluray daily <<date>>\n"
+                    + "    date should be on 8 days Range from date 2 days ago to 10 days ago";
+            return new TextMessage("help");
+        } else if (stringSplit[0].equals("/author")) {
+            String author = "Agas Yanpratama\n"
+                    + "1606918396\n"
+                    + "Advanced Programming - A\n"
+                    + "Tugas Akhir Adprog 2018 - 1";
+            return new TextMessage(author);
         }
-        return new TextMessage("Wrong Input sorry example\n"
-                + "input: /oricon bluray weekly 2018-05-09");
+        return new TextMessage("Wrong Command\n"
+                + "Command List:\n"
+                + "/oriconHelp\n"
+                + "/author\n"
+                + "/oricon bluray (daily/weekly) _date_\n");
     }
 
     @EventMapping
