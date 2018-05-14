@@ -7,7 +7,7 @@ import java.io.IOException;
 import oriconbd.utilities.WebScrapper;
 
 
-public class DailyRank implements RankCommand{
+public class DailyRank implements RankCommand {
     /**
      * Constructor Daily Rank.
      */
